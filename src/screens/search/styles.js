@@ -4,6 +4,69 @@ import * as colors from '../../constants/colors';
 
 
 const styles = StyleSheet.create({
+  MainBox:{
+    flex:1,
+    marginTop:'2%',
+ },
+  
+  menuicon:{
+    width:15,
+    height:15,
+    marginLeft:10,
+  },
+Item1: {
+  flex:1,
+ flexDirection: 'row',
+ marginLeft:15,
+},
+SubView:{
+ flex:1,
+ flexDirection:'column',
+ justifyContent:'center',
+ marginLeft:20,
+ marginRight:20
+},
+datatext:{
+  fontSize:16,
+   fontWeight:'bold',
+   color:'black',
+   lineHeight:25
+},
+titleText:{
+  marginLeft:'1%',
+  fontSize:14,
+  paddingTop:1 ,
+  lineHeight:25
+},
+datatext1:{
+ color:'red',
+ marginTop:15,
+ alignItems:'center'
+},
+datatext12:{
+ color:'black',
+ marginTop:15,
+ alignItems:'center'
+},
+TextView:{
+ flex:1,
+ flexDirection:'row',
+ 
+ margin:10
+},
+Button:{
+ marginTop:40,
+  backgroundColor:colors.btnColor,
+  height:40,
+  borderRadius:8
+},
+ButtonText:{
+ textAlign:'center',
+ fontSize:20,
+ fontWeight:'bold',
+ color:'#1b5987',
+ paddingTop:5
+},
   container: {
     flex: 1,
     // alignItems:'center'

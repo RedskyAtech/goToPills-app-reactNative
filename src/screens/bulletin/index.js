@@ -41,8 +41,8 @@ export default class Bulletin extends Component {
   };
 
   render() {
-    const renderItem = ({item}) => (
-      <TouchableOpacity
+    const renderItem = ({item,key}) => (
+      <TouchableOpacity key={key}
         onPress={() => {
           this.props.navigation.navigate('Bulletindetails', {
             bullID: item.bullID,
