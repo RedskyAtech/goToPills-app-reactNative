@@ -453,7 +453,14 @@ export default class Search extends Component {
                     ? 'None'
                     : 'Loading...'}
                 </Text>
-                <TouchableOpacity style={styles.Button}>
+                <TouchableOpacity
+                 onPress={() => {
+                  this.props.navigation.navigate('Bulletindetails', {
+                    bullID: this.state.searchResults.bullID,
+                    GenericName: this.state.searchResults.GenericName,
+                    brandName: this.state.searchResults.brandName,
+                  });
+                }} style={styles.Button}>
                   <Text style={styles.ButtonText}>DRUG DETAILS</Text>
                 </TouchableOpacity>
               </View>
