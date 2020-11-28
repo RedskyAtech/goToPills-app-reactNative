@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, Image, TouchableOpacity, Platform} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import {Header, Left, Right, Body} from 'native-base';
 import {NavigationActions, StackActions} from 'react-navigation';
 import {DrawerActions} from 'react-navigation-drawer';
@@ -26,20 +26,7 @@ export default class mainHeader extends Component {
     const menuBtn = (
       <Image source={menu} resizeMode="cover" style={{width: 20, height: 20}} />
     );
-    console.log(
-      '............navigate.................',
-      navigate.state.routeName,
-    );
 
-    // const searchBar = (
-    //     <Card style={{ width: '90%', alignSelf: 'center', marginBottom: '5%', borderRadius: 5 }}>
-    //         <View style={styles.searchView} >
-    //             <TouchableOpacity >
-    //                 <Image source={require('../assets/search.png')} style={styles.searchIcon} />
-    //             </TouchableOpacity>
-    //         </View>
-    //     </Card>
-    // );
     return (
       <Header style={[{backgroundColor: '#4458e4'}]}>
         <Left>
@@ -63,7 +50,6 @@ export default class mainHeader extends Component {
             </Text>
         </Body>
         <Right>{null}</Right>
-        {/* this.props.displaySearchBar ? searchBar :  */}
       </Header>
     );
   }

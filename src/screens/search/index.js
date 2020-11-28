@@ -1,11 +1,6 @@
-//This is an example code for Navigator//
 import React, {Component} from 'react';
-//import react in our code.
 import {
-  StyleSheet,
   View,
-  Button,
-  StatusBar,
   Text,
   ScrollView,
   Linking,
@@ -383,84 +378,94 @@ export default class Search extends Component {
                 </Text>
               </View>
               <View style={styles.SubView}>
-                <Text style={styles.datatext1}>
-                  {this.state.searchResults &&
-                  this.state.searchResults.OffLabelUses
-                    ? this.state.searchResults.OffLabelUses
-                    : null}
-                </Text>
-                <Text style={styles.datatext1}>
-                  {this.state.searchResults &&
-                  this.state.searchResults.OffLabelUsesOK
-                    ? this.state.searchResults.OffLabelUsesOK
-                    : null}
-                </Text>
-                <Text style={styles.datatext12}>
-                  {this.state.searchResults &&
-                  this.state.searchResults.MinimumAge
-                    ? this.state.searchResults.MinimumAge
-                    : null}
-                </Text>
-                <Text style={styles.datatext12}>
-                  {this.state.searchResults &&
-                  this.state.searchResults.MinimumAgeOK
-                    ? this.state.searchResults.MinimumAgeOK
-                    : null}
-                </Text>
+                {this.state.searchResults &&
+                this.state.searchResults.OffLabelUses ? (
+                  <Text style={styles.datatext1}>
+                    {this.state.searchResults.OffLabelUses}
+                  </Text>
+                ) : null}
+                {this.state.searchResults &&
+                this.state.searchResults.OffLabelUsesOK ? (
+                  <Text style={styles.datatext1}>
+                    {this.state.searchResults.OffLabelUsesOK}
+                  </Text>
+                ) : null}
 
-                <Text style={styles.datatext12}>
-                  {this.state.searchResults &&
-                  this.state.searchResults.MaximumAge
-                    ? this.state.searchResults.MaximumAge
-                    : null}
-                </Text>
+                {this.state.searchResults &&
+                this.state.searchResults.MinimumAge ? (
+                  <Text style={styles.datatext12}>
+                    {' '}
+                    {this.state.searchResults.MinimumAge}
+                  </Text>
+                ) : null}
+                {this.state.searchResults &&
+                this.state.searchResults.MinimumAgeOK ? (
+                  <Text style={styles.datatext12}>
+                    {' '}
+                    {this.state.searchResults.MinimumAgeOK}
+                  </Text>
+                ) : null}
+                {this.state.searchResults &&
+                this.state.searchResults.MaximumAge ? (
+                  <Text style={styles.datatext12}>
+                    {' '}
+                    {this.state.searchResults.MaximumAge}
+                  </Text>
+                ) : null}
                 <Text style={styles.datatext12}>
                   {this.state.searchResults &&
                   this.state.searchResults.UsageDuration
                     ? this.state.searchResults.UsageDuration
                     : null}
                 </Text>
-                <Text style={styles.datatext12}>
-                  {this.state.searchResults &&
-                  this.state.searchResults.UsageDurationOK
-                    ? this.state.searchResults.UsageDurationOK
-                    : null}
-                </Text>
-                <Text style={styles.datatext12}>
-                  {this.state.searchResults && this.state.searchResults.gender
-                    ? this.state.searchResults.gender
-                    : null}
-                </Text>
-                <Text style={styles.datatext12}>
-                  {this.state.searchResults && this.state.searchResults.genderOK
-                    ? this.state.searchResults.genderOK
-                    : null}
-                </Text>
-                <Text style={styles.datatext12}>
-                  {this.state.searchResults &&
-                  this.state.searchResults.Conditions
-                    ? this.state.searchResults.Conditions
-                    : null}
-                </Text>
-                <Text style={styles.datatext12}>
-                  {this.state.searchResults &&
-                  this.state.searchResults.ApprovedOffLabelUses
-                    ? this.state.searchResults.ApprovedOffLabelUses
-                    : null}
-                </Text>
+                {this.state.searchResults &&
+                this.state.searchResults.UsageDurationOK ? (
+                  <Text style={styles.datatext12}>
+                    {' '}
+                    {this.state.searchResults.UsageDurationOK}
+                  </Text>
+                ) : null}
+                {this.state.searchResults && this.state.searchResults.gender ? (
+                  <Text style={styles.datatext12}>
+                    {' '}
+                    {this.state.searchResults.gender}
+                  </Text>
+                ) : null}
+                {this.state.searchResults &&
+                this.state.searchResults.genderOK ? (
+                  <Text style={styles.datatext12}>
+                    {' '}
+                    {this.state.searchResults.genderOK}
+                  </Text>
+                ) : null}
+                {this.state.searchResults &&
+                this.state.searchResults.Conditions ? (
+                  <Text style={styles.datatext12}>
+                    {' '}
+                    {this.state.searchResults.Conditions}
+                  </Text>
+                ) : null}
+                {this.state.searchResults &&
+                this.state.searchResults.ApprovedOffLabelUses ? (
+                  <Text style={styles.datatext12}>
+                    {' '}
+                    {this.state.searchResults.ApprovedOffLabelUses}
+                  </Text>
+                ) : null}
                 <Text style={styles.datatext12}>
                   {!this.state.searchResults.OffLabelUses
                     ? 'None'
                     : 'Loading...'}
                 </Text>
                 <TouchableOpacity
-                 onPress={() => {
-                  this.props.navigation.navigate('Bulletindetails', {
-                    bullID: this.state.searchResults.bullID,
-                    GenericName: this.state.searchResults.GenericName,
-                    brandName: this.state.searchResults.brandName,
-                  });
-                }} style={styles.Button}>
+                  onPress={() => {
+                    this.props.navigation.navigate('Bulletindetails', {
+                      bullID: this.state.searchResults.bullID,
+                      GenericName: this.state.searchResults.GenericName,
+                      brandName: this.state.searchResults.brandName,
+                    });
+                  }}
+                  style={styles.Button}>
                   <Text style={styles.ButtonText}>DRUG DETAILS</Text>
                 </TouchableOpacity>
               </View>

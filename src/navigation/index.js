@@ -57,10 +57,7 @@ const DrawerNavigator = createDrawerNavigator({
   },
   Bulletindetails: {
     screen: BulletinDetailScreen,
-  },
-  // ContactUs: {
-  //   screen: ContactUsScreen,
-  // },
+  }
 },
   {
     contentOptions: {
